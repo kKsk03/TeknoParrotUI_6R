@@ -203,6 +203,10 @@
     <Compile Include="AvailCode\LobbyLib.cs" />
     <Compile Include="AvailCode\LobbyList.cs" />
     <Compile Include="AvailCode\TpNetState.cs" />
+    <Compile Include="Custom\CustomSettings.xaml.cs">
+      <DependentUpon>CustomSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Settings.cs" />
     <Compile Include="GameProfileLoader.cs" />
     <Compile Include="Helpers\WPFFolderBrowserInterop\comguids.cs" />
     <Compile Include="Helpers\WPFFolderBrowserInterop\errorhelper.cs" />
@@ -284,6 +288,10 @@
     <Compile Include="Views\VerifyGame.xaml.cs">
       <DependentUpon>VerifyGame.xaml</DependentUpon>
     </Compile>
+    <Page Include="Custom\CustomSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ViewModels\TextInputDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

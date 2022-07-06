@@ -40,7 +40,7 @@
         <Viewbox Margin="10,3,187,4" Grid.Row="1" Grid.Column="1">
             <TextBlock HorizontalAlignment="Left" Margin="10,8,0,7" TextWrapping="Wrap" Text="Patron: " Width="91" FontSize="22" />
         </Viewbox>
-        <ScrollViewer Grid.Row="3" Grid.Column="1" Margin="10,0">
+        <ScrollViewer Grid.Row="3" Grid.Column="1" Margin="11,0,8,51">
             <TextBlock x:Name="gameInfoText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{x:Static p:Resources.LibraryNoInfo}" Width="256" TextAlignment="Center" FontSize="14" Grid.Column="1" Grid.Row="3"/>
         </ScrollViewer>
         <Button Content="{x:Static p:Resources.LibraryMoreInfo}" HorizontalAlignment="Left" Margin="10,4,0,2" Width="256" Click="BtnMoreInfo" Grid.Column="1" Grid.Row="4" Height="Auto"/>
@@ -53,6 +53,7 @@
         <ToggleSwitch:HorizontalToggleSwitch x:Name="ChkTestMenu" HorizontalAlignment="Left" Margin="95,20,0,0" VerticalAlignment="Stretch" RenderTransformOrigin="0.71,1.36" Grid.Column="1" Grid.Row="8" Height="Auto"/>
         <Button Content="{x:Static p:Resources.LibraryVerifyGame}" HorizontalAlignment="Left" Margin="10,3,0,3" Width="256" Click="BtnVerifyGame" Grid.Column="1" Grid.Row="9" Height="Auto" />
         <Button Content="{x:Static p:Resources.LibraryDownloadMissingIcons}" HorizontalAlignment="Left" Margin="9,4,0,1" Width="256" Click="BtnDownloadMissingIcons" Grid.Column="1" Grid.Row="10" Height="Auto" />
+        <Button x:Name="CustomSettingsButton" Grid.Column="1" Content="CUSTOM SETTINGS (WMMT)" HorizontalAlignment="Center" Margin="0,125,0,0" Grid.Row="3" VerticalAlignment="Top" Height="36" Width="254" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

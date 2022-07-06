@@ -1,0 +1,19 @@
+﻿<Window x:Class="TeknoParrotUi.Custom.CustomSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeknoParrotUi.Custom"
+        mc:Ignorable="d"
+        Title="Custom settings (development aids)" Height="450" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontSize="14">
+    <Grid>
+        <TextBox x:Name="OpenParrotDirectory" HorizontalAlignment="Center" Height="26" Margin="0,62,0,0" TextWrapping="Wrap" Text="(OpenParrot directory...)" VerticalAlignment="Top" Width="732"/>
+        <Label Content="OpenParrot Directory&#xD;&#xA;" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" Width="152" Height="29"/>
+        <Button Content="Save settings" HorizontalAlignment="Left" Margin="625,368,0,0" VerticalAlignment="Top" Height="35" Width="141" Click="Button_Click"/>
+        <Label Content="This build of TeknoParrotUI is developed by Luna.&#xD;&#xA;&#xD;&#xA;I have no interest in contributing back to your&#xD;&#xA;awful program that steals other people's work for profit." HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Height="87" Width="376"/>
+
+    </Grid>
+</Window>

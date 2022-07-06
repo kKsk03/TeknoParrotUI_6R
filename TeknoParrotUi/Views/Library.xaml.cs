@@ -289,31 +289,28 @@ namespace TeknoParrotUi.Views
             switch (gameProfile.EmulatorType)
             {
                 case EmulatorType.Lindbergh:
-                    loaderExe = ".\\TeknoParrot\\BudgieLoader.exe";
-                    break;
+                    throw new Exception("Lindbergh games are not supported. This build is for Wangan Midnight Maximum Tune 6.");
                 case EmulatorType.N2:
-                    loaderExe = ".\\N2\\BudgieLoader.exe";
-                    break;
+                    throw new Exception("N2 games are not supported. This build is for Wangan Midnight Maximum Tune 6.");
                 case EmulatorType.ElfLdr2:
-                    loaderExe = ".\\ElfLdr2\\BudgieLoader.exe";
-                    break;
+                    throw new Exception("Elfldr2 games are not supported. This build is for Wangan Midnight Maximum Tune 6.");
                 case EmulatorType.OpenParrot:
                     loaderDll = (is64Bit ? ".\\OpenParrotx64\\OpenParrot64" : ".\\OpenParrotWin32\\OpenParrot");
                     break;
                 case EmulatorType.OpenParrotKonami:
-                    loaderExe = ".\\OpenParrotWin32\\OpenParrotKonamiLoader.exe";
-                    break;
+                    throw new Exception("Konami games are not supported. This build is for Wangan Midnight Maximum Tune 6.");
                 case EmulatorType.SegaTools:
-                    File.Copy(".\\SegaTools\\aimeio.dll", Path.GetDirectoryName(gameProfile.GamePath) + "\\aimeio.dll", true);
-                    File.Copy(".\\SegaTools\\idzhook.dll", Path.GetDirectoryName(gameProfile.GamePath) + "\\idzhook.dll", true);
-                    File.Copy(".\\SegaTools\\idzio.dll", Path.GetDirectoryName(gameProfile.GamePath) + "\\idzio.dll", true);
-                    File.Copy(".\\SegaTools\\inject.exe", Path.GetDirectoryName(gameProfile.GamePath) + "\\inject.exe", true);
-                    loaderExe = ".\\SegaTools\\inject.exe";
-                    loaderDll = "idzhook";
-                    break;
+                    throw new Exception("SegaTools are not supported in this build. TeknoParrot is stealing others' work by including this.");
                 default:
-                    loaderDll = (is64Bit ? ".\\TeknoParrot\\TeknoParrot64" : ".\\TeknoParrot\\TeknoParrot");
                     break;
+            }
+
+            // The arcade community hates you.
+            if (File.Exists("CustomSettings.json"))
+            {
+                var s = Custom.CustomSettings.LoadSettings();
+                loaderExe = Path.Combine(s.OpenParrotPath, "OpenParrotLoader64.exe");
+                loaderDll = Path.Combine(s.OpenParrotPath, "OpenParrot64");
             }
 
             if (!File.Exists(loaderExe))
@@ -697,6 +694,12 @@ namespace TeknoParrotUi.Views
                     // ignored
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new Custom.CustomSettings();
+            win.Show();
         }
     }
 }
