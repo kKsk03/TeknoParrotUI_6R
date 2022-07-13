@@ -116,6 +116,42 @@
         <FieldType>Text</FieldType>
     </FieldInformation>
     <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>TerminalIP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+    <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>RouterIP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+    <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>Cab1IP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+     <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>Cab2IP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+     <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>Cab3IP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+     <FieldInformation>
+        <CategoryName>General</CategoryName>
+        <FieldName>Cab4IP</FieldName>
+        <FieldValue>0.0.0.0</FieldValue>
+        <FieldType>Text</FieldType>
+    </FieldInformation>
+    <FieldInformation>
       <CategoryName>Tune</CategoryName>
       <FieldName>Force Full Tune</FieldName>
       <FieldValue>0</FieldValue>
